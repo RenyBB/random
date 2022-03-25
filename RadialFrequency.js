@@ -42,7 +42,7 @@ function rf_D4creator(x, y, fr, theta, C, Lm, Rm, A, Wp) {
 // Second function used to create the stimulus 
 // This function generates the array of pixel values to be drawn.
 // When using the function, we only want to change the first argument (intensity), which determines the shape of the stimulus. 
-// If intensity=0, the shape will be a perfect cirtle.
+// If intensity=0, the shape will be a perfect circle.
 function rf_picCreator(intensity=0.008, picPixel=300, fr=4, C=0.8, Lm=0.5) {
   picPixel = Math.round(picPixel/2)
   var theta = Math.random() * Math.PI
