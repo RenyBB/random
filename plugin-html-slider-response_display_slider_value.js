@@ -182,8 +182,14 @@ var jsPsychHtmlSliderResponseDisplayValue = (function (jspsych) {
                     display_element.querySelector("#jspsych-html-slider-response-next").disabled = false;
                 };
                 display_element
-                    .querySelector("#jspsych-html-slider-response-response")
-                    .addEventListener("keydown", enable_button);
+                  .querySelector("#jspsych-html-slider-response-response")
+                  .addEventListener("change", enable_button);
+              display_element
+                  .querySelector("#jspsych-html-slider-response-response")
+                  .addEventListener("keydown", enable_button);
+              display_element
+                  .querySelector("#jspsych-html-slider-response-response")
+                  .addEventListener("input", enable_button);
     
             }
             const end_trial = () => {
