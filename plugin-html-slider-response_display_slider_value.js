@@ -164,7 +164,7 @@ var jsPsychHtmlSliderResponseDisplayValue = (function (jspsych) {
                 response: null,
             };
 
-            function handleSliderKey(e) {
+          function handleSliderKey(e) {
                 let slider = display_element.querySelector('input[type="range"]');
                 if(e.key == 'a') {
                   slider.value = parseFloat(Math.max(trial.min, parseFloat(slider.value) - trial.step));
