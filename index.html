@@ -22,16 +22,6 @@
     choices: ['Run demo']
   };
 
-  var show_data = {
-    type: jsPsychHtmlButtonResponseDisplayValue,
-    stimulus: function() {
-      var trial_data = jsPsych.data.getLastTrialData().values();
-      var trial_json = JSON.stringify(trial_data, null, 2);
-      return `<p style="margin-bottom:0px;"><strong>Trial data:</strong></p>
-        <pre style="margin-top:0px;text-align:left;">${trial_json}</pre>`;
-    },
-    choices: ['Repeat demo']
-  };
   
   var trial = {
     type: jsPsychHtmlSliderResponseDisplayValue,
@@ -44,7 +34,7 @@
   };
 
   var trial_loop = {
-    timeline: [trial, show_data],
+    timeline: [trial],
     loop_function: function() {
       return true;
     }
