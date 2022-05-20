@@ -167,10 +167,10 @@ var jsPsychHtmlSliderResponseDisplayValue = (function (jspsych) {
             function handleSliderKey(e) {
                 let slider = display_element.querySelector('input[type="range"]');
                 if(e.key == 'a') {
-                  slider.value = parseFloat(Math.max(trial.min, slider.value - trial.step));
+                  slider.value = parseFloat(Math.max(trial.min, parseFloat(slider.value) - trial.step));
                 }
                 if(e.key == 's') {
-                  slider.value = parseFloat(Math.min(trial.max, slider.value + trial.step));
+                  slider.value = parseFloat(Math.min(trial.max, parseFloat(slider.value) + trial.step));
                 }
                 display_element.querySelector('#jspsych-html-slider-response-stimulus').textContent = display_element.querySelector('#jspsych-html-slider-response-response').valueAsNumber;
               }
