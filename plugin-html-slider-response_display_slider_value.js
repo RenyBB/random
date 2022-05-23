@@ -113,7 +113,7 @@ var jsPsychHtmlSliderResponseDisplayValue = (function (jspsych) {
             }
             html += '">';
             html +=
-                '<input type="range" class="jspsych-slider" value="' +
+                '<input type="range" role="slider" class="jspsych-slider" value="' +
                     trial.slider_start +
                     '" min="' +
                     trial.min +
